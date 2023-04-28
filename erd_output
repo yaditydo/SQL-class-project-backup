@@ -1,0 +1,32 @@
+graph ERD {
+	node [fillcolor=lightblue fontcolor=black fontname=Arial fontsize=12 shape=ellipse style=filled]
+	edge [fontcolor=black fontname=Arial fontsize=10]
+	Patients
+	MedicalStaff
+	Appointments
+	MedicalRecords
+	Billing
+	Inventory
+	ClinicResources
+	ClinicLocations
+	PatientClinicLocations
+	MedicalStaffClinicLocations
+	Prescriptions
+	Allergies
+	Patients -- Appointments [arrowhead=none arrowtail=crowodot dir=both]
+	MedicalStaff -- Appointments [arrowhead=none arrowtail=crowodot dir=both]
+	Patients -- Prescriptions [arrowhead=none arrowtail=crowodot dir=both]
+	MedicalStaff -- Prescriptions [arrowhead=none arrowtail=crowodot dir=both]
+	Patients -- Billing [arrowhead=none arrowtail=crowodot dir=both]
+	MedicalStaff -- Billing [arrowhead=none arrowtail=crowodot dir=both]
+	Patients -- MedicalRecords [arrowhead=none arrowtail=crowodot dir=both]
+	MedicalStaff -- MedicalRecords [arrowhead=none arrowtail=crowodot dir=both]
+	Patients -- Allergies [arrowhead=none arrowtail=crowodot dir=both]
+	Patients -- PatientClinicLocations [arrowhead=none arrowtail=crowodot dir=both]
+	ClinicLocations -- PatientClinicLocations [arrowhead=none arrowtail=crow dir=both]
+	MedicalStaff -- MedicalStaffClinicLocations [arrowhead=none arrowtail=crowodot dir=both]
+	ClinicLocations -- MedicalStaffClinicLocations [arrowhead=none arrowtail=crow dir=both]
+	ClinicResources -- Inventory [arrowhead=none arrowtail=crow dir=both]
+	ClinicResources -- ClinicLocations [arrowhead=none arrowtail=crow dir=both]
+	dpi=100 overlap=false size="10,10"
+}
