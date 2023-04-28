@@ -2,7 +2,7 @@ import sqlite3
 import tkinter as tk
 from tkinter import ttk
 
-# Your provided functions have been updated to work with SQLite
+# connection to db
 
 def create_connection(connection):
     conn = None
@@ -12,7 +12,7 @@ def create_connection(connection):
         print(e)
 
     return conn
-
+#insert patient data
 def insert_patient(connection, first_name, last_name, date_of_birth, gender):
     cursor = connection.cursor()
     query = """
@@ -23,6 +23,7 @@ def insert_patient(connection, first_name, last_name, date_of_birth, gender):
     cursor.execute(query, data)
     connection.commit()
     cursor.close()
+#insert payment info
 def insert_payment_info(connection, patient_id, billing_id, payment_method, payment_date):
     cursor = connection.cursor()
     query = """
@@ -46,7 +47,7 @@ def insert_prescription(connection, medical_record_id, inventory_item_id, dosage
     connection.commit()
     cursor.close()
 
-
+#insert diagnosis
 def insert_diagnosis(connection, medical_record_id, diagnosis, date):
     cursor = connection.cursor()
     query = """
@@ -58,7 +59,7 @@ def insert_diagnosis(connection, medical_record_id, diagnosis, date):
     connection.commit()
     cursor.close()
 
-
+#insert treatment
 def insert_treatment(connection, medical_record_id, treatment, date):
     cursor = connection.cursor()
     query = """
