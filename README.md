@@ -1,7 +1,7 @@
 Code for database class project.
-Scenario: Smarthealth Clinic has hired AICodeAssemblers Consulting LLC. to aid in the construction in a new database. In a real life scenario ideally level's of privelege as to data access and AES-256-CBC would be implemented across the database to protect customer/patient medical data. Unfortunately I couldn't get sqlcipher3 to install properly so wasn't able to implement it
+Scenario: Smarthealth Clinic has hired AICodeAssemblers Consulting LLC. to aid in the construction in a new database. In a real life scenario ideally level's of privelege as to data access and monitoring as well as AES-256bit (CBC) mode of operation would be implemented across the database to protect customer/patient data. Unfortunately I couldn't get sqlcipher3 to install properly so wasn't able to implement it
 python --version == '10.10.10'. 
-to run any files toy must first activate the virtual environment for all included file dependencies
+to run any files you must first activate the virtual environment for all included file dependencies
 - Windows - run env/Scripts/activate to activate the virtual environment installed dependencies
 - Linux/Unix 'source env/bin/activate' For Linux or Unix System Environments to activate the virtual environment installed dependencies
 - `cd py - source code files`
